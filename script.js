@@ -19,13 +19,14 @@ const winCombos = [
     [0, 4, 8],
     [6, 4, 2]
 ];
+
 // gets the cells
 const cells = document.querySelectorAll('.cell');
 startGame();
 
 function startGame() {
     //resets the game
-    document.querySelector(".endgame").style.display = "none";
+    document.querySelector(".endgame").style.display = "";
     //makes the board
     origBoard = Array.from(Array(9).keys());
     for (var index = 0; index < cells.length; index++) {
@@ -36,9 +37,11 @@ function startGame() {
 }
 
 function turnClick() {
-    turn
+    console.log(square.target.id);
+    turn(square.target.id, humanPlayer);
 }
 
 function turn(squareID, player) {
-
+    origBoard[squareID] = player;
+    document.getElementById(squareID).innerText = player;
 }
