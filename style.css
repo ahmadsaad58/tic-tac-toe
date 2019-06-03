@@ -45,7 +45,7 @@ table tr td:last-child {
 
 /* Deals with the End Game class */
 .endgame {
-    display: contents;
+    display: none;
     width: 250px;
     background-color: #7D6D61;
     /* Puts the box right on top of board */
