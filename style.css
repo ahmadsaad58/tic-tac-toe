@@ -1,6 +1,5 @@
 /* Styles for the Tic Tac Toe Board */
 
-
 /* Styles the cells */
 td {
     border: 2px solid #333333;
@@ -46,7 +45,7 @@ table tr td:last-child {
 
 /* Deals with the End Game class */
 .endgame {
-    display: none;
+    display: contents;
     width: 250px;
     background-color: #7D6D61;
     /* Puts the box right on top of board */
