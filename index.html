@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- Comes from boiler plate -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- Added CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Added JS -->
+		<script src="script.js"></script>
+		<!-- Title -->
+		<title>Tic Tac Toe</title>
+	</head>
 
-<head>
-	<!-- Comes from boiler plate -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- Added CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<!-- Added JS -->
-	<script src="script.js"></script>
-	<!-- Title -->
-	<title>Tic Tac Toe</title>
-</head>
+	<body>
+		<!-- Created Table -->
+		<table>
+			<tr>
+				<td class="cell" id="0"></td>
+				<td class="cell" id="1"></td>
+				<td class="cell" id="2"></td>
+			</tr>
+			<tr>
+				<td class="cell" id="3"></td>
+				<td class="cell" id="4"></td>
+				<td class="cell" id="5"></td>
+			</tr>
+			<tr>
+				<td class="cell" id="6"></td>
+				<td class="cell" id="7"></td>
+				<td class="cell" id="8"></td>
+			</tr>
+		</table>
 
-<body>
-	<!-- Created Table -->
-	<table>
-		<tr>
-			<td class="cell" id="0"></td>
-			<td class="cell" id="1"></td>
-			<td class="cell" id="2"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="3"></td>
-			<td class="cell" id="4"></td>
-			<td class="cell" id="5"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="6"></td>
-			<td class="cell" id="7"></td>
-			<td class="cell" id="8"></td>
-		</tr>
-	</table>
+		<!-- Created the end game resources -->
+		<div class="endgame">
+			<div class="text"></div>
+		</div>
 
-	<!-- Created the end game resources -->
-	<div class="endgame">
-		<div class="text"></div>
-	</div>
-
-	<!-- Restart Button -->
-	<button onclick="startGame()">Play</button>
-
-
-</body>
+		<!-- Restart Button -->
+		<button onclick="startGame()">Play</button>
+	</body>
 
 </html>

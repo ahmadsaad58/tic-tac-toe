@@ -36,5 +36,9 @@ function startGame() {
 }
 
 function turnClick() {
+    turn
+}
+
+function turn(squareID, player) {
 
 }
