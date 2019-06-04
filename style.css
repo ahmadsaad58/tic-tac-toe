@@ -2,7 +2,7 @@
 
 /* Styles the cells */
 td {
-    border: 2px solid #333333;
+    border: 5px solid #3A506B;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -13,9 +13,14 @@ td {
     cursor: pointer;
 }
 
+body {
+    background-color: #0B132B;
+}
+
 
 /* Styles the table */
 table {
+    color: #6FFFE9;
     border-collapse: collapse;
     position: absolute;
     left: 50%;
@@ -43,11 +48,11 @@ table tr td:last-child {
 }
 
 
-/* Deals with the End Game class */
+/* Deals with the End Game Class */
 .endgame {
-    display: none;
+    /* display: none; */
     width: 250px;
-    background-color: #7D6D61;
+    background-color: #1C2541;
     /* Puts the box right on top of board */
     position: absolute;
     left: 50%;
@@ -61,6 +66,6 @@ table tr td:last-child {
     /* Text within the box */
     text-align: center;
     border-radius: 5px;
-    color: #C3DFE0;
+    color: #5BC0BE;
     font-size: 2em;
 }
