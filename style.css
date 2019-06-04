@@ -70,3 +70,22 @@ table tr td:last-child {
     color: #5BC0BE;
     font-size: 2em;
 }
+
+
+/* Button style */
+.button {
+    border-radius: 2px;
+    color: #3A506B;
+    font-size: 20px;
+    background-color: #5BC0BE;
+    border: none;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #3A506B;
+    color: #5BC0BE;
+}
