@@ -64,7 +64,18 @@ function openSpots() {
 	return origBoard.filter(s => typeof s == 'number');
 }
 function bestSpot() {
-	return openSpots()[0];
+	return minimax(origBoard, aiPlayer).index;
+}
+
+function minimax(board, player) {
+	var openSpots = openSpots(); 
+	if (checkWin(board, humanPlayer)){
+		return {score: -10};
+	} else if (checkWin(board, aiPlayer)) {
+		return {score: 10};
+	} else if (openSpots.length == 0) {
+		return {score: 0};
+	}
 }
 
 function turn(squareID, player) {
