@@ -1,3 +1,5 @@
 # Tic-Tac-Toe
-Tic Tac Toe Web App
+
+A Tic Tac Toe Web App 
+The AI is based on the minimax algorithm 
 
