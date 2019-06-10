@@ -48,6 +48,7 @@ function turnClick(square) {
 }
 
 function checkTie(player) {
+	//checks whether the game is a tie or not
 	let gameWon = checkWin(origBoard, player);
 	if (openSpots().length == 0 && !gameWon) {
 		for (var index = 0; index < cells.length; index++) {
@@ -61,6 +62,7 @@ function checkTie(player) {
 }
 
 function openSpots() {
+	//finds the open spots
 	return origBoard.filter(s => typeof s == 'number');
 }
 function bestSpot() {
@@ -70,6 +72,7 @@ function bestSpot() {
 function minimax(newBoard, player) {
 	var emptySpots = openSpots();
 
+	//sets the scores
 	if (checkWin(newBoard, humanPlayer)) {
 		return { score: -10 };
 	} else if (checkWin(newBoard, aiPlayer)) {
@@ -78,6 +81,7 @@ function minimax(newBoard, player) {
 		return { score: 0 };
 	}
 
+	//finds the moves and recalls the function
 	var moves = [];
 	for (var i = 0; i < emptySpots.length; i++) {
 		var move = {};
@@ -100,6 +104,7 @@ function minimax(newBoard, player) {
 		//moves.push(move);
 	}
 
+	//gets the best move
 	var bestMove;
 	if (player === aiPlayer) {
 		var bestScore = -10000;
@@ -119,10 +124,12 @@ function minimax(newBoard, player) {
 		}
 	}
 
+	//returns the best move, a move object
 	return moves[bestMove];
 }
 
 function turn(squareID, player) {
+	//plays a turn
 	origBoard[squareID] = player;
 	document.getElementById(squareID).innerText = player;
 	let gameWon = checkWin(origBoard, player);
@@ -132,6 +139,7 @@ function turn(squareID, player) {
 }
 
 function checkWin(board, player) {
+	//check the win
 	let plays = board.reduce((a, e, i) => (e === player) ? a.concat(i) : a, []);
 	let gameWon = null;
 	for (let [index, win] of winCombos.entries()) {
