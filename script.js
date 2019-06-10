@@ -125,7 +125,7 @@ function minimax(newBoard, player) {
 	}
 
 	//returns the best move, a move object
-	return moves[bestMove];
+	return moves[bestMove];	
 }
 
 function turn(squareID, player) {
