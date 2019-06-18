@@ -125,7 +125,7 @@ function minimax(newBoard, player) {
 	}
 
 	//returns the best move, a move object
-	return moves[bestMove];	
+	return moves[bestMove];
 }
 
 function turn(squareID, player) {
@@ -152,14 +152,19 @@ function checkWin(board, player) {
 }
 
 function gameOver(gameWon) {
+	winner = gameWon.player;
 	for (let index of winCombos[gameWon.index]) {
-		document.getElementById(index).style.backgroundColor = gameWon.player == humanPlayer ? "blue" : "red";
+		document.getElementById(index).style.backgroundColor = winner == humanPlayer ? "blue" : "red";
 	}
 	//makes sure you can't keep playing by deleting event listener
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == humanPlayer ? "WINNER" : "LOSER");
+
+	declareWinner(winner == humanPlayer ? "WINNER" : "LOSER");
+	if (winner == humanPlayer) {
+		setCookie()
+	}
 }
 
 function declareWinner(player) {
@@ -179,12 +184,12 @@ function declareWinner(player) {
 // 	}
 // }
 
-// function setCookie(cname, cvalue, exdays) {
-// 	var d = new Date();
-// 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-// 	var expires = "expires=" + d.toGMTString();
-// 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-// }
+function setCookie() {
+	var user = prompt("You won! Please enter your name:", "");
+	if (user != "" && user != null) {
+		document.cookie = user + "=" + ";path=/";
+	}
+}
 
 // function getCookie(cname) {
 // 	var name = cname + "=";
